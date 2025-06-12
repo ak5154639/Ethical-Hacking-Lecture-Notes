@@ -122,12 +122,11 @@ A communication System for connecting computer/hosts.
     - A longer message is broken up into smaller chunks.
     - The chunks are packets
     - Every packet contains a header \
-  ![Data Transmission in ShortPackets](images/Data%20Transmission%20in%20Short%20Packets.jpg)
+  ![Data Transmission in ShortPackets](images/Data%20Transmission%20in%20short%20packets.png)
   - Based on stored forward concept
     - Each intermediate node receives a whole packet.
     - Decides the route.
-    - Forwards the packet along the selected route. \
-  ![Store and Forward Concept](images/Store%20and%20Forward.jpg)
+    - Forwards the packet along the selected route. 
   - **Advantages:**
     - Links can be shared; so link utilization is better.
     - Suitable for computer-generated traffic.
