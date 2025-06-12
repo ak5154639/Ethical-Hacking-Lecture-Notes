@@ -18,4 +18,4 @@ This course is aimed at giving a deep understanding of:
 ### [Week 1: Networking Basics and Ethical Hacking](Week1.md)
 - [Introduction to Ethical Hacking](Week1.md#️-introduction-to-ethical-hacking)
 - [Basic Concepts of Networking](Week1.md#-networking-basics)
-- TCP/IP Protocol Stack
+- [TCP/IP Protocol Stack](Week1.md#️-tcpip-protocol-stack)

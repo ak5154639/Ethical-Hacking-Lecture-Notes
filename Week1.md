@@ -173,7 +173,7 @@ Similar to circuit switching, a route is established beforre transmission then a
 
 ---
 
-## 🏗️ TCP/IP Protocol Stack (Part I)
+## 🏗️ TCP/IP Protocol Stack
 
 ### Internet Standard: TCP/IP
 - Foundation of the **Internet**
@@ -233,4 +233,54 @@ Similar to circuit switching, a route is established beforre transmission then a
 ### Encapsulation
 - As data flows down the protocols hierarchy, headers get appended to it.\
 ![Encapsulation](images/Encapsulation.png)
+
+
+### The IP Layer
+- IP provides a connection-less, unreliable delivery system for packets.
+- Each packet is independent of one another
+  - IP layer need not maintain any history
+  - Each IP packet must contain the source & destination addresses.
+  - IP layer does not guarantee delivery of packets
+- IP layer encapsulation
+  - Receives a data chunk from the higher layer (TCP or UDP).
+  - Prepends a header of minimum 20 bytes.
+  - Containing relevant info for handling routing & flow control.\
+  ![IP Layer Encapsulation](images/IP%20layer%20encapsulation.png)
+
+
+### Format of IP Datagram
+![Format of IP Datagram](images/Format%20of%20IP%20Datagram.png)
+#### IP Header fields
+##### VER (4 bits)
+- Version of IP (typically IPv4 but have IPv6 too)
+##### HLEN (4 bits)
+- Lenght of header in 32-bit words
+- Minimum size is 5 and maximum 15.
+##### Total Lenght (16 bits)
+- Length of bytes in datagram including headers
+- Max size is 2<sup>16</sup> = 66536
+##### Service Type (8 bits)
+- Allow packet to be assigned a priority
+- Router can use this field to route packets
+##### TTL (8 bits)
+- Prevents packets from travelling in a loop
+- Sender sets a value, It reaches zero, packet is discarded
+##### Protocol (8 bits)
+- Identifies the higher layer protocol being used.
+##### Source IP Address (32 bits)
+##### Destination IP Address (32 bits)
+##### Identification, Flags, Fragment offset (16 bits)
+- Used for handling fragmentation.
+##### Options (variable)
+- Can be given, provided router supports, source routings, etc..
+##### Header Checksum (16 bits)
+- Covers only the IP header.
+- Mismatch in checksum causes the datagram to be discarded.
+### Viewing IP Packets
+- We can use packet sniffers to view IP packets.
+  - Wireshark
+  - Windump
+  - tcpdump
+  - Tshark
+  - SolarisWinds
 ---
